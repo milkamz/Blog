@@ -1,0 +1,138 @@
+#wrapper {
+    display: flex;
+    flex-direction: column
+}
+/*
+.nav-container.base {   
+    width: 100%;
+    z-index: 1000;
+    position: absolute;    
+
+}
+*/
+
+/*
+.nav-container.base .main-nav {
+    overflow: hidden;
+    background-color: white;
+    position: fixed;    
+    width:100%;
+    z-index: 1000;    
+}
+*/
+.nav-container {
+    display:block;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    position: fixed;    
+    width:100%;
+    z-index: 1000;
+    border:1px solid red;
+}
+.main-nav {
+    width:100%;
+    text-align: center;    
+}
+a.mobile-btn {
+    display: none;    
+}
+.main-nav .container{
+    display:block;
+    position: relative;
+}
+.main-nav {
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+.container .menu {    
+    margin:0;
+}
+.menu li {
+    display: inline-block; 
+    
+}
+#about {
+    display:block;
+    position:relative;
+    border:1px solid green;
+    margin-top:70px;
+}
+.block-content {
+    display: flex;
+    border:1px solid black;
+    width:100%;   
+}
+.block-about {
+    border:1px solid yellow;
+    width:100%;
+}
+#poto {
+    display: block;
+    position:relative;       
+}
+.filter li{
+    display:inline-block;
+    position:relative;
+    font-size:15px;
+    border:1px solid red;
+    padding:5px 10px;
+    margin-right:20px;
+}
+.con-md {
+    border:1px solid red;
+}
+.row.masonry {
+    display:inline-flex;
+    position: relative;
+    border:1px solid red;
+}
+.item {
+    border:1px solid red;
+}
+.item img {  
+    width:100%;   
+}
+
+#footer  {    
+    display: block;
+    position:relative;
+    background-color: black; 
+    text-align: center;
+}
+.footer-right a{
+    color:white;
+    font-size: 15px;
+}
+.footer-center {   
+    color:white;
+    font-size: 10px;
+}
+
+/* -------------------- Media queries -------------------- */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    a.mobile-btn {
+        display: inline-block;
+    }
+    .menu {
+        display: none;
+    }
+    .block-content {
+        display: block;
+        width:100%;
+    }
+}
+@media only screen and (max-width:479px) {
+    a.mobile-btn {
+        display: inline-block;
+    }
+    .menu {
+        display: none;
+    }
+    .block-content {
+        display: block;
+        width:100%;
+}
+    
+/* -------------------- End media queries -------------------- */
