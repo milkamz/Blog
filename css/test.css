@@ -68,10 +68,15 @@ a.mobile-btn {
     align-items: center;
 }
 .item {
-    border:1px solid red;
+    border:1px solid rgba(255,255,255,0.5);
 }
 .item img {  
     width:100%;   
+}
+figcaption {
+    font-size: 13px;
+    text-align: center;
+    border-bottom:1px solid #dedede;
 }
 
 #footer  {    
