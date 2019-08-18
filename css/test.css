@@ -34,8 +34,7 @@ a.mobile-btn {
 }
 #about {
     display:block;
-    position:relative;
-    border:1px solid green;
+    position:relative;    
     margin-top:70px;
 }
 .block-content {
@@ -43,9 +42,22 @@ a.mobile-btn {
     border:1px solid black;
     width:100%;   
 }
-.block-about {
-    border:1px solid yellow;
+.block-about {    
     width:100%;
+    padding-left:10px;
+}
+.block-about.one {    
+    background: #f7f7f7;
+    
+}
+.block-about.two {    
+    background: #ebebeb;
+}
+.block-about.three {    
+    background: #f7f7f7;
+}
+.block-about .block-title {
+    text-align: center;
 }
 #poto {
     display: block;
