@@ -44,7 +44,7 @@ a.mobile-btn {
 }
 .block-about {    
     width:100%;
-    padding-left:10px;
+    padding:20px 50px 20px;
 }
 .block-about.one {    
     background: #f7f7f7;
@@ -63,12 +63,19 @@ a.mobile-btn {
     display: block;
     position:relative;       
 }
+.poto .container {
+    width:100%;
+    padding: 20px 20px 20px;
+}
 .filter li{
     display:inline-block;
     position:relative;
     font-size:15px;    
     padding:5px 10px;
     margin-right:20px;
+}
+.filter li:hover {
+    background: #f5f5f5;
 }
 .con-md {
     border:1px solid red;
