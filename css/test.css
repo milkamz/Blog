@@ -29,7 +29,8 @@ a.mobile-btn {
     margin:0;
 }
 .menu li {
-    display: inline-block; 
+    display: inline-block;
+    padding-right: 30px;
     
 }
 #about {
