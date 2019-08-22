@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="acss/main.css">
     <link rel="stylesheet" href="css/test.css">
     <link rel="stylesheet" href="fontello-blog/css/fontello.css">
+    <link rel="stylesheet" href="Poto_filter.css">
+    
+    <script src="./Poto_filter.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145894363-1"></script>
@@ -144,74 +149,52 @@
                 </div>
             </div>            
         </section>
-        <section id="poto" class="poto">
-            <div class="block-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md">
-                           <div class="block-title">
-                               <h2 class="title">
-                                   POTO 
-                               </h2>
-                           </div>
-                            <div class="block-works">
-                                <div class="row">
-                                    <div class="col-sm">
-                                        <div class="block-filter">
-                                            <ul class="filter">
-                                                <li>
-                                                    <a class="active" href="#" data-filter="all">All</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" data-filter="all">Cooking</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" data-filter="all">Mountain Bike</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row masonry">
-                                    <div class="col-md">
-                                        <div class="item bike">
-                                            <a href="https://www.sefiles.net/images/library/zoom/giant-talon-29-3-363570-1.jpg" class="popup">
-                                                <img src="https://www.sefiles.net/images/library/zoom/giant-talon-29-3-363570-1.jpg" alt>               <figcaption>Mountain Bike Giant talon 29 3</figcaption>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md">
-                                        <div class="item cooking">
-                                            <a href="img/cooking/tofu.jpg" class="popup">
-                                                <img src="img/cooking/tofu.jpg" alt>
-                                                    <figcaption>Tofu with seafood soup</figcaption>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md">
-                                        <div class="item cooking">
-                                            <a href="img/jinju.jpg" class="popup">
-                                                <img src="img/jinju.jpg" alt>
-                                                    <figcaption>Jinju light festival</figcaption>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md">
-                                        <div class="item cooking">
-                                            <a href="img/home.jpg" class="popup">
-                                                <img src="img/home.jpg" alt>
-                                                    <figcaption>Home farm</figcaption>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        
+<section id="poto" class="poto">
+    <h2>PORTFOLIO</h2>
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('Mountain-bike')"> Mountain-Bike</button>
+        <button class="btn" onclick="filterSelection('Cooking')"> Cooking</button>
+        <button class="btn" onclick="filterSelection('Nature')"> Nature</button>
+
+    </div>
+
+    <!-- Portfolio Gallery Grid -->
+    <div class="myrow">
+        <div class="column Mountain-bike show">
+            <div class="content">
+                <img src="img/Bike/giant-talon-29-3.jpg" alt="Mountain-bike" style="width:100%" class="object">
+                <h4>Mountain bike</h4>
+                <p>Giant talon 29 3</p>
             </div>
-        </section>
-   
+        </div>
+        <div class="column Cooking show">
+            <div class="content">
+                <img src="img/cooking/tofu.jpg" alt="Cooking" style="width:100%" class="object">
+                <h4>Cooking</h4>
+                <p>Tofu with sea food soup</p>
+            </div>
+        </div>
+        <div class="column Nature show">
+            <div class="content">
+                <img src="./img/jinju.jpg" alt="Nature" style="width:100%" class="object">
+                <h4>Jinju city</h4>
+                <p>Jinju city light festival</p>
+            </div>
+        </div>
+        <div class="column Nature show">   
+            <div class="content">
+                <img src="./img/home.jpg" alt="Nature" style="width:100%" class="object">
+                <h4>Farm</h4>
+                <p>Farm vegetable</p>
+            </div>
+        </div>
+
+        <!-- END GRID -->
+    </div>
+</section>        
+        
         <div id="disqus_thread"></div>
 <script>
 

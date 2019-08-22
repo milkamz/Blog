@@ -1,0 +1,69 @@
+<html>
+
+<head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    .container {
+        display:block;
+        position:relative;
+        border:1px solid red;
+        align-items: center;
+        
+    }
+    .content {
+        display:inline-block;
+        position: relative;
+        column-count: 3;
+/*
+        width:350px;  
+        height:350px;
+*/
+        border:1px solid green;
+        padding: 10px 10px 10px;   
+        
+        
+    }
+    img {
+        border:1px solid blue;
+        object-fit: contain;
+    }
+    .object{
+        width:250px;
+        height:250px;
+    }
+    
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .content {
+        display:block;
+        position:relative;
+    } 
+}
+@media only screen and (max-width:479px) {
+    .content {
+        display:block;
+        position:relative;
+    }
+    
+}
+    
+</style>
+</head>
+
+<body>
+<div id="img" calss="img">
+   <div class="container">
+   <div class="content">
+    <img src="img/Bike/giant-talon-29-3.jpg" class="object fill" style="width:100%">
+       </div>
+    <div class="content">
+      <img src="img/cooking/tofu.jpg" class="object cover" style="width:100%">
+       </div>
+    </div>
+</div>
+</body>
+
+</html>
