@@ -1,115 +1,233 @@
+<html>
+
 <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--
+    $('#listTab tr').each(function(){
+    var lv = $(this).find('td')eq(1).html();
+    $(this).find('td')eq(1).html(1000);
+    });
+-->
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            $('.totalColumn').each(function(tr) {
+                var totals = parseInt($(tr).find('.totalCol').text());
+            });
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Level1', totals[0]],
+                ['Level2', totals[1]],
+                ['BER', totals[2]]
+            ]);
+
+            var options = {
+                title: 'My Daily Activities',
+                slices: {
+                    0: {
+                        color: 'blue'
+                    },
+                    1: {
+                        color: 'orange'
+                    },
+                    2: {
+                        color: 'red'
+                    },
+                }
+            };
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        };
+    </script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Date');
+            data.addColumn('number', 'lv1');
+            data.addColumn('number', 'lv2');
+            data.addColumn('number', 'lv0');
+
+            $('#ship_qty tr').not(':first, :last').each(function(i, tr) {
+                data.addRow([
+                    $(tr).find('.date').text(),
+                    parseInt($(tr).find('.lv1').text()),
+                    parseInt($(tr).find('.lv2').text()),
+                    parseInt($(tr).find('.lv0').text())
+                ]);
+            });
+            var options = {
+                width: 500,
+                height: 400,
+                legend: {
+                    position: 'bottom',
+                    maxLines: 3
+                },
+                vAxis: {
+                    minValue: 0
+                },
+                bar: {
+                    groupWidth: '75%'
+                },
+                isStacked: true,
+                series: {
+                    0: {
+                        color: '#5d81f8'
+                    },
+                    1: {
+                        color: '#f7e55e'
+                    },
+                    2: {
+                        color: '#f75555'
+                    },
+                }
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+            chart.draw(data,options);
+            
+        };
+
+
+        var totals = [0, 0, 0, 0];
+        $(document).ready(function() {
+
+            var $dataRows = $("#ship_qty tr").not(':first, :last');
+
+            $dataRows.each(function() {
+                $(this).find('.lv1, .lv2, .lv0, .stotal').each(function(i) {
+                    totals[i] += parseInt($(this).html());
+                });
+            });
+            $("#ship_qty th.totalCol").each(function(i) {
+                $(this).html(totals[i]);
+            });
+
+        });
+        
+    </script>
     <style>
-        section {
+        table {
+            border-collapse: collapse;
+        }
+        #ship_qty thead, #ship_qty tbody, #ship_qty tfoot {
             display: block;
-            float: left;
-            border: 2px solid green;
-            min-height: 300px;
-            width: 100%;
-            border-radius: 4px;
         }
 
-        a {
-            display: block;
-            float: left;
-            width: 25%;
-            text-decoration: none;
-            text-align: center;
-            padding: 5px 0;
-            color: white;
-            background: #1271C7;
-        }
-
-        div {
-            display: block;
-            float: left;
-            height: 40px;
-            width: 40px;
+        td,
+        th {
             border: 1px solid black;
-            margin: 10px;
-            -webkit-transition: all .8s linear;
-            -moz-transition: all .8s linear;
-            -o-transition: all .8s linear;
-            -ms-transition: all .8s linear;
-            transition: all .8s linear;
-            margin-top: 20px;
         }
 
-        div[data-filter="red"] {
-            background: red;
-
+        thead {
+            text-align: center;
         }
 
-        div[data-filter="green"] {
-            background: green;
+        tbody {
+            text-align: right;
         }
 
-        div[data-filter="blue"] {
-            background: blue;
+        th {
+            background-color: #dddddd;
         }
 
-
-
-        a:focus[data-filter] {
-            opacity: .8;
-            outline: none;
+        #ship_qty th, td {
+            width: 150px;
         }
-
-        a[data-filter="red"]:focus~div:not([data-filter="red"]) {
-            height: 0px;
-            width: 0px;
-            border: none;
-            margin: 0;
+        #ship_qty tbody {
+            max-height: 50px;
+            overflow-y: auto;
+            overflow-x: hidden;
         }
-
-        a[data-filter="green"]:focus~div:not([data-filter="green"]) {
-            height: 0px;
-            width: 0px;
-            border: none;
-            margin: 0;
+        
+        #piechart {
+            border: 5px solid red;
+           position: relative;
         }
-
-        a[data-filter="blue"]:focus~div:not([data-filter="blue"]) {
-            height: 0px;
-            width: 0px;
-            border: none;
-            margin: 0;
+        #columnchart_material{
+            padding: 10px;
+            border: 10px solid white;
+            position: relative;
         }
-        a[data-filter="bike"]:focus~div:not([data-filter="bike"]) {
-            height: 0px;
-            width: 0px;
-            border: none;
-            margin: 0;
-        }
-        img {
-           width:100%;
-        }
+       
     </style>
 </head>
-<html>
-<section>
-    <a href="#" data-filter="all" tabindex="-1">ALL</a>
-    <a href="#" data-filter="red" tabindex="-1">RED</a>
-    <a href="#" data-filter="green" tabindex="-1">GREEN</a>
-    <a href="#" data-filter="blue" tabindex="-1">BLUE</a>
-    <a href="#" data-filter="bike" tabindex="-1">BIKE</a>
 
-    <div data-filter="red"></div>
-    <div data-filter="blue"></div>
-    <div data-filter="red"></div>
-    <div data-filter="blue"></div>
-    <div data-filter="green"></div>
-    <div data-filter="red"></div>
-    <div data-filter="red"></div>
-    <div data-filter="red"></div>
-    <div data-filter="blue"></div>
-    <div data-filter="green"></div>
-    <div data-filter="blue"></div>
-    <div data-filter="green"></div>
-    <div data-filter="green"></div>
-    <div data-filter="bike">
-        <img src="img/cooking/tofu.jpg">
+<body>
+  <form>
+     <select  name="forma" onchange="location = this.value;">
+         <option value="/users/ship_qty_process">By day</option>
+         <option value="By week">By week</option>
+         <option value="By month">By month</option>         
+     </select>
+      
+      <input type="submit" href="/">
+      
+  </form>
+   <div id="wrap">
+    <table id="ship_qty">
+           <thead>
+            <tr class="titlerow">
+                <td>date</td>
+                <td>lv1</td>
+                <td>lv2</td>
+                <td>lv0</td>
+                <td>total</td>
+            </tr>
+           </thead>
+           <tbody>
+            <tr id="listTab">
+                <td class="date">2019-11-12</td>
+                <td class="lv1">100</td>
+                <td class="lv2">50</td>
+                <td class="lv0">60</td>
+                <td class="stotal">60</td>
+            </tr>
+            <tr id="listTab">
+                <td class="date">2019-11-13</td>
+                <td class="lv1">20</td>
+                <td class="lv2">70</td>
+                <td class="lv0">90</td>
+                <td class="stotal">60</td>
+            </tr>
+            <tr id="listTab">
+                <td class="date">2019-11-14</td>
+                <td class="lv1">30</td>
+                <td class="lv2">80</td>
+                <td class="lv0">90</td>
+                <td class="stotal">60</td>
+            </tr>
+           </tbody>
+           <tfoot>
+            <tr class="totalColumn">
+                <th class="date">Total</th>
+                <th class="totalCol"></th>
+                <th class="totalCol"></th>
+                <th class="totalCol"></th>
+                <th class="totalCol"></th>
+            </tr>
+            </tfoot>        
+    </table>
     </div>
-</section>
+    <!--      <div id="number_format_chart"></div>-->
+    <table>
+    
+        <tr>
+        <td><div id="piechart" style="width: 300px; height: 300px;"></div></td>
+        <td><div id="columnchart_values"></div></td>
+        </tr>   
+    </table>
+    <script type="text/javascript">
+        
+    </script>
+</body>
 
 </html>

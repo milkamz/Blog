@@ -1,256 +1,191 @@
 <!DOCTYPE HTML>
+
 <html>
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="acss/base.css">
-    <link rel="stylesheet" href="acss/main.css">
-    <link rel="stylesheet" href="css/test.css">
-    <link rel="stylesheet" href="fontello-blog/css/fontello.css">
-    <link rel="stylesheet" href="Poto_filter.css">
-    
-    <script src="./Poto_filter.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145894363-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Cardo' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.js"></script>
 
-  gtag('config', 'UA-145894363-1');
-</script>
-
+    <link rel="stylesheet" href="css/sticky.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-5.9.0-web/css/all.css">
+    <script type="text/javascript" src="js/sticky.js"></script>
+ <script type="text/javascript" src="blog.js"></script>
 </head>
 
 <body>
-    <div id="wrapper">
-        <div class="nav-container base">
-            <nav class="main-nav">
-                <div class="container mb">
-                    <div class="row">
-                        <div class="mobile-menu-holder">
-                            <a class="mobile-btn" href="#">
-                                <i class="icon-menu"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="container pc">
-                    <ul class="menu">
-                        <li>
-                            <a class="scroll" href="#home">HOME<i class="icon-home"></i></a>
-                        </li>
-                        <li>
-                            <a class="scroll" href="#about">ABOUT<i class="icon-user"></i></a>
-                        </li>
-<!--
-                        <li>
-                            <a class="scroll" href="#resume">RESUME<i class="icon-doc-text-inv"></i></a>
-                        </li>
--->
-                        <li>
-                            <a class="scroll" href="#blog">BLOG<i class="icon-chat"></i></a>
-                        </li>
-                        <li>
-                            <a class="scroll" href="#poto">POTO<i class="icon-camera-alt"></i></a>
-                        </li>
-<!--
-                        <li>
-                            <a class="scroll" href="#contant">CONTANT<i class="icon-mail"></i></a>
-                        </li>
--->
+    <header class="main_h">
+
+        <div class="row">
+            <a class="logo" href="#">Nolboo Blog</a>
+            <div class="sociallink">
+                    <ul>
+                        <li><a href="#" class="fab fa-facebook-square"></a></li>
+                        <li><a href="#" class="fab fa-instagram"></a></li>
                     </ul>
                 </div>
+
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#bike">Bike</a></li>
+                    <li><a href="#cooking">Cooking</a></li>
+                    <li><a href="#lifestyle">Lifestyle</a></li>
+                    <li><a href="#poto">Poto</a></li>
+                    
+                </ul>
+                
             </nav>
+
+        </div> <!-- / row -->
+
+    </header>
+    <div id="index-page" class="bike-banner">
+
+        <h1><span>Exciting cool</span><br>Mountain Bike</h1>
+
+        <div class="mouse">
+            <span class="fas fa-biking"></span>
         </div>
-        <section id="about" class="about">
-            <div class="block-content clearfix">
-                <div class="block-about one">
-                    <div class="block-title">
-                        <h2 class="title">
-                            Who am I?
-                        </h2>
-                    </div>
-                    <h3 class="lead">
-                        Cell phone / 3D Laser technician
-                    </h3>
-                </div>
-                <div class="block-about two">
-                    <div class="block-title">
-                        <h3 class="title">
-                            Personal Info
-                        </h3>
-                        <ul class="p-info">
-                            <li>
-                                <span>Birthdate</span> : 00/00/0000
-                            </li>
-                            <li>
-                                <span>Phone</span> : 000-000-0000
-                            </li>
-                            <li>
-                                <span>Email</span> : ??@gmail.com
-                            </li>
-                            <li>
-                                <span>Country</span> : Korea
-                            </li>
-                            <li>
-                                <span>Adress</span> : Texas 75067
-                            </li>
-                        </ul>
-                        <ul class="p-socials">
-                            <li>
-                                <a href="#"><i class="icon"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="icon"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="block-about three">
-                    <h4 class="block-title">
-                        My Experience
-                    </h4>
-                    <div class="block-experience">
-                        <div class="experience">
-                            <div class="exp-icon">
-                                <span class="ico"><i class="icon-"></i></span>
-                            </div>
-                            <div class="exp-det">
-                                <h5>Cell Phone repair</h5>
-                                <p>Google pixel.</p>
-                            </div>
-                            <div class="experience">
-                                <div class="exp-icon">
-                                    <span class="ico"><i class="icon-"></i></span>
-                                </div>
-                                <div class="exp-det">
-                                    <h6>3D laser print</h6>
-                                    <p>Glowforge</p>
-                                </div>
-                            </div>
-                            <div class="experience">
-                                <div class="exp-icon">
-                                    <span class="ico"><i class="icon-"></i></span>
-                                </div>
-                                <div class="exp-det">
-                                    <h7>Restaurang</h7>
-                                    <p>Deli</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>            
-        </section>
-        
-<section id="poto" class="poto">
-    <h2>PORTFOLIO</h2>
-    <div id="myBtnContainer">
-        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-        <button class="btn" onclick="filterSelection('Mountain-bike')"> Mountain-Bike</button>
-        <button class="btn" onclick="filterSelection('Cooking')"> Cooking</button>
-        <button class="btn" onclick="filterSelection('Nature')"> Nature</button>
 
     </div>
-
-    <!-- Portfolio Gallery Grid -->
-    <div class="myrow">
-        <div class="column Mountain-bike show">
-            <div class="content">
-                <img src="img/Bike/giant-talon-29-3.jpg" alt="Mountain-bike" style="width:100%" class="object">
-                <h4>Mountain bike</h4>
-                <p>Giant talon 29 3</p>
+    <div class="row content">
+        <div class="row-sqs">
+            <div class="block-title">
+                <h id="bike">Bike</h>
+            </div>
+            <div class="block-html">
+                <a href="#" class="see-all">See All Bike</a>
             </div>
         </div>
-        <div class="column Cooking show">
-            <div class="content">
-                <img src="img/cooking/tofu.jpg" alt="Cooking" style="width:100%" class="object">
-                <h4>Cooking</h4>
-                <p>Tofu with sea food soup</p>
-            </div>
-        </div>
-        <div class="column Nature show">
-            <div class="content">
-                <img src="./img/jinju.jpg" alt="Nature" style="width:100%" class="object">
-                <h4>Jinju city</h4>
-                <p>Jinju city light festival</p>
-            </div>
-        </div>
-        <div class="column Nature show">   
-            <div class="content">
-                <img src="./img/home.jpg" alt="Nature" style="width:100%" class="object">
-                <h4>Farm</h4>
-                <p>Farm vegetable</p>
-            </div>
-        </div>
-
-        <!-- END GRID -->
-    </div>
-</section>        
-        
-        <div id="disqus_thread"></div>
-<script>
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://nolboo-2.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                            
-        
-        <div id="footer" class="footer">
-                <div class="container-footer">
-                    <div class="footer-row">
-                        <div class="footer-right">
-                            <div class="social-link">
-                               <a href="#" class="icon-facebook-rect"></a>
-                               <a href="#" class="icon-twitter-bird"></a>
-                               <a href="#" class="icon-youtube"></a>
-                            </div>
-                        </div>                        
-                        <div class="footer-center">                            
-                            <div class="bottom">
-                                <div class="content">
-                                    <p>2019. Nolboo Blog. All Right Reserved</p>
-                                </div>
-                            </div>
-                        </div>
+        <div class="block block-bike">
+            <div class="block-content">
+                <div class="item item-bike">
+                    <div class="img">
+                        <img src="img/Bike/My%20bike.jpg" style="width:100%;">
+                    </div>
+                    <div class="meta-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dolorem, maiores alias possimus saepe veniam magnam quisquam sapiente eligendi ut ex nemo minima velit quos. Rerum, culpa? Labore, eius quam?</p>
+                    </div>
+                </div>
+                <div class="item item-bike">
+                    <div class="img">
+                        <img src="img/Bike/My%20bike3.jpg" style="width:100%;">
+                    </div>
+                    <div class="meta-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dolorem, maiores alias possimus saepe veniam magnam quisquam sapiente eligendi ut ex nemo minima velit quos. Rerum, culpa? Labore, eius quam?</p>
+                    </div>
+                </div>
+                <div class="item item-bike">
+                    <div class="img">
+                        <img src="img/Bike/Item%20for%20Bike.jpg" style="width:100%;">
+                    </div>
+                    <div class="meta-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dolorem, maiores alias possimus saepe veniam magnam quisquam sapiente eligendi ut ex nemo minima velit quos. Rerum, culpa? Labore, eius quam?</p>
                     </div>
                 </div>
             </div>
-    </div>
-    <script>
-        if(location.hash) {
-        console.log(location.hash.substr(1));
-      } else {      
-      }
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
-    
-    
-    
+        </div>
+        <div id="index-page" class="cooking-banner">
 
-    
+            <h1><span>enjoy food</span><br>Cooking</h1>
+
+            <div class="mouse">
+                <span class="fas fa-utensils"></span>
+            </div>
+
+        </div>
+        <div class="row-sqs">
+            <div class="block-title">
+                <h id="cooking">Cooking</h>
+            </div>
+            <div class="block-html">
+                <a href="#">See All Cooking</a>
+            </div>
+        </div>
+        <div class="block block-cooking">
+            <div class="block-content">
+                <div class="item item-cooking">
+                    <div class="img">
+                        <img src="img/cooking/Pasta%20with%20shrimp.jpg" style="width:100%;">
+                    </div>
+                    <div class="meta-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dolorem, maiores alias possimus saepe veniam magnam quisquam sapiente eligendi ut ex nemo minima velit quos. Rerum, culpa? Labore, eius quam?</p>
+                    </div>
+                </div>
+                <div class="item item-cooking">
+                    <div class="img">
+                        <img src="img/cooking/Roasted%20Blak%20Bean%20paste%20with%20noodle.jpg" style="width:100%;">
+                    </div>
+                    <div class="meta-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dolorem, maiores alias possimus saepe veniam magnam quisquam sapiente eligendi ut ex nemo minima velit quos. Rerum, culpa? Labore, eius quam?</p>
+                    </div>
+                </div>
+                <div class="item item-cooking">
+                    <div class="img">
+                        <img src="img/cooking/tofu.jpg" style="width:100%;">
+                    </div>
+                    <div class="meta-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dolorem, maiores alias possimus saepe veniam magnam quisquam sapiente eligendi ut ex nemo minima velit quos. Rerum, culpa? Labore, eius quam?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="index-page" class="life-banner">
+
+        <h1><span>Exciting Life</span><br>My Life</h1>
+
+        <div class="mouse">
+            <span class="far fa-thumbs-up"></span> 
+        </div>
+
+    </div>
+        <div class="row-sqs">
+            <div class="block-title">
+                <h id="lifestyle">Lifestyle</h>
+            </div>
+            <div class="block-html">
+                <a href="#">See All Lifestyle</a>
+            </div>
+        </div>
+        <div class="block block-lifestyle">
+            <div class="block-content">
+                <div class="item item-lifestyle">
+                    <div class="img">
+                        <img src="img/My%20car.jpg" style="width:100%;">
+                    </div>
+                    <div class="meta-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dolorem, maiores alias possimus saepe veniam magnam quisquam sapiente eligendi ut ex nemo minima velit quos. Rerum, culpa? Labore, eius quam?</p>
+                    </div>
+                </div>
+                <div class="item item-lifestyle">
+                    <div class="img">
+                        <img src="img/jinju.jpg" style="width:100%;">
+                    </div>
+                    <div class="meta-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dolorem, maiores alias possimus saepe veniam magnam quisquam sapiente eligendi ut ex nemo minima velit quos. Rerum, culpa? Labore, eius quam?</p>
+                    </div>
+                </div>
+                <div class="item item-lifestyle">
+                    <div class="img">
+                        <img src="img/home.jpg" style="width:100%;">
+                    </div>
+                    <div class="meta-container">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod dolorem, maiores alias possimus saepe veniam magnam quisquam sapiente eligendi ut ex nemo minima velit quos. Rerum, culpa? Labore, eius quam?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>

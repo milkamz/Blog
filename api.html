@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="new style=" width:1000px; height:500; margin-top:40px">
+        <input id="bookName" value="" type="text">
+        <button onclick="javascript:goSearch();">검색</button>
+    </div>
+
+</body>
+
+</html>
+<script>
+       function goSearch() {
+        var SEARVALUE = $("#bookName").val();
+        if (!SEARVALUE) {
+            alert("input text");
+            return false;
+        }
+        if (SEARVALUE) {
+            @.ajax({
+                    type: 'POST',
+                    dataType: 'json',
+                    url: "/api.js",
+                    data: {
+                        'SEARVALUE': SEARVALUE
+                    }
+                })
+                .done(function(result) {
+                    console.log(result);
+                });
+        }
+    }
+    $(document).ready(function() {});
+</script>

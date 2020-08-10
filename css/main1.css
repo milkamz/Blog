@@ -1,0 +1,244 @@
+#wrapper {
+    position: relative;
+    
+    
+}
+.nav-container.base {   
+    width: 100%;
+    z-index: 1000;
+    position: absolute;    
+
+}
+.main-nav {    
+    overflow: hidden;
+    background-color: red;
+    position: fixed;
+    top: 0;    
+    width: 100%;
+    text-align-last: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.menu li {
+    display: inline-block;
+}
+.menu li a {
+    display: block;
+    left: 1px;
+    padding: 22px 25px 20px;
+    position: relative;
+}
+
+.menu li a {
+    color: black;
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+.menu li a i {
+    color: #00a6ff;
+}
+
+.mobile-menu-holder {
+    position: relative;
+}
+
+a.mobile-btn {
+    color: black;
+    font-size: 25px;
+    position: absolute;
+    right: 0;
+    display: none;
+}
+
+/*About section*/
+
+
+.block-about {       
+    padding: 95px 50px 46px;
+    position: relative;
+    display: table-cell;
+    width: 3.3333%;
+}
+
+.block-about.one,
+.block-about.three {
+    background-color: #f4f4f4;
+}
+
+.block-about.two {
+    background-color: #e2e0e0;
+}
+
+.block-icon {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
+
+/* -------------------- Media queries -------------------- */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+    .container {
+        width: 100%;
+    }
+
+    .main-nav {
+        min-height: 65px;
+    }
+
+    .main-nav .menu.first {
+        padding-top: 5px;
+    }
+
+    .main-nav .menu.second {
+        padding-bottom: 20px;
+    }
+
+    a.mobile-btn {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 15px;
+        right: 15px;
+        z-index: 1001;
+    }
+
+    .main-nav ul.menu {
+        display: none;
+    }
+
+    .main-nav ul.menu {
+        text-align: left;
+        width: 25%;
+    }
+
+    .menu li {
+        border: none;
+        display: inline;
+    }
+
+    .menu li a {
+        display: block;
+        left: 0;
+        padding: 15px 8px 0;
+    }
+
+    .block-about {
+        display: block;
+        width: 100%;
+    }
+
+
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    body {
+        font-size: 13px;
+    }
+
+    .menu li a i {
+        display: none;
+    }
+
+    .main-nav {
+        min-height: 65px;
+    }
+
+    .main-nav .menu.first {
+        padding-top: 5px;
+    }
+
+    .main-nav .menu.second {
+        padding-bottom: 20px;
+    }
+
+    a.mobile-btn {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 15px;
+        right: 15px;
+        z-index: 1001;
+    }
+
+    .main-nav ul.menu {
+        display: none;
+    }
+
+    .block-about {
+        display: block;
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width:479px) {
+    h2.title {
+        font-size: 28px;
+    }
+
+    .main-nav {
+        min-height: 65px;
+    }
+
+    .main-nav .menu.first {
+        padding-top: 5px;
+    }
+
+    .main-nav .menu.second {
+        padding-bottom: 20px;
+    }
+
+    a.mobile-btn {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 15px;
+        right: 15px;
+        z-index: 1001;
+    }
+
+    .main-nav ul.menu {
+        display: none;
+    }
+
+    .main-nav ul.menu {
+        text-align: left;
+        width: 25%;
+    }
+
+    .menu li {
+        border: none;
+        display: inline;
+    }
+
+    .menu li a {
+        display: block;
+        left: 0;
+        padding: 15px 8px 0;
+    }
+
+    .block-about {
+        display: block;
+        width: 100%;
+        padding: 95px 15px 46px;
+    }
+
+    .block-icon {
+        right: 30px;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
+
+/* -------------------- End media queries -------------------- */

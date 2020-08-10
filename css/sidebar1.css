@@ -1,0 +1,139 @@
+.wrapper {
+    display: flex;
+    /*    position: relative;*/
+    justify-content: space-between;
+}
+
+#mySidenav {
+    min-width: 200px;
+    max-width: 200px;
+    text-align: center;
+    background: #030303;
+    color: #fff;
+    transition: all 0.5s;
+    height: 100%;
+    position: fixed;
+    /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: #111;
+    /* Black */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 20px;
+
+}
+
+#mySidenav.active {
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+    background: #030303;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+#mySidenav.active a {
+    display: none;
+}
+
+.sidenav i {
+    display: none;
+
+}
+
+#mySidenav.active i {
+    display: block;
+}
+
+.sidenav a,
+i {
+    display: flex;
+    padding: 5px 5px 5px 5px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.5s;
+}
+
+#main {
+    margin-left: 200px;
+    padding: 0px 10px;
+}
+
+.card {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover,
+i:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    position: relative;
+
+    padding-top: 80px;
+
+}
+
+@media screen and (max-width: 450px) {
+    #wrapper {
+        display: block;
+        position: relative;
+    }
+
+    #main {
+        
+        padding-top: 50px;
+        margin-left: 0px;
+        width:100%;
+    }
+
+    .card {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+            
+    #mySidenav {
+        display: none;
+        position: relative;
+        display: 100%;
+    }
+    #top-menu {
+        display:inline-flex;
+        position: relative;
+        padding: 5px 10px;
+        width:100%;
+        border-bottom: 1px solid gray;
+        position:fixed;
+        z-index: 1;
+        background-color: aliceblue;
+        overflow-y: hidden;
+    }
+    #top-menu a{
+        width:100%;
+        text-decoration: none;
+        color:black;
+        font-size: 1.3rem;
+        padding:5px 25px
+        
+    }
+
+    
+}

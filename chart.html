@@ -1,0 +1,180 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+<script type="text/javascript">
+ google.charts.load('current', {
+  packages: ['corechart'],
+  callback: drawChart
+});
+
+function drawChart() {
+  var tableRows = [];
+  var results = document.getElementById('Displaytable');
+  Array.prototype.forEach.call(results.rows, function(row) {
+    var tableColumns = [];
+    Array.prototype.forEach.call(row.cells, function(cell) {
+      var cellText = cell.textContent || cell.innerText;
+      switch (cell.cellIndex) {
+        case 0:
+          tableColumns.push(cellText.trim());
+          break;
+
+        default:
+          switch (row.rowIndex) {
+            case 0:
+              tableColumns.push(cellText.trim());
+              break;
+
+            default:
+              tableColumns.push(parseFloat(cellText));
+          }
+      }
+    });
+    tableRows.push(tableColumns);
+  });
+
+  var data = google.visualization.arrayToDataTable(tableRows);
+  var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+  chart.draw(data);
+}
+
+</script>
+<style>
+          table {
+    border-collapse: collapse;
+}
+      td,
+th {
+    border: 1px solid black;
+}
+
+thead {
+    text-align: center;
+}
+
+tbody {
+    text-align: right;
+}
+
+th {
+    background-color: #dddddd;
+}
+
+#ship_qty td {
+    width: 200px;
+}
+
+table td {
+    width: 100px;
+}
+      </style>
+    </head>
+    <body>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+
+<div id="chart_div"></div>
+
+<table id="Displaytable">
+  <tr>
+    <th></th>
+    <th>
+      Forms
+    </th>
+    <th>
+      A
+    </th>
+    <th>
+      B
+    </th>
+    <th>
+      C
+    </th>
+    <th>
+      TotalTime
+    </th>
+  </tr>
+  <tr>
+    <th>
+      Row 1
+    </th>
+    <td id="a">
+      1
+    </td>
+    <td>
+      1
+    </td>
+    <td>
+      1
+    </td>
+    <td>
+      1
+    </td>
+    <td>
+      3
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Row 2
+    </th>
+    <td id="a">
+      2
+    </td>
+    <td>
+      2
+    </td>
+    <td>
+      2
+    </td>
+    <td>
+      2
+    </td>
+    <td>
+      6
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Row 3
+    </th>
+    <td>
+      2
+    </td>
+    <td id="a">
+      2
+    </td>
+    <td>
+      2
+    </td>
+    <td>
+      2
+    </td>
+    <td>
+      6
+    </td>
+  </tr>
+  <tr>
+    <th>
+      Row 4
+    </th>
+    <td >
+      3
+    </td>
+    <td>
+      3
+    </td>
+    <td>
+      3
+    </td>
+    <td>
+      3
+    </td>
+    <td>
+      9
+    </td>
+  </tr>
+</table>
+    </body>
+</html>

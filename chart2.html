@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawChart);
+    
+  function drawChart() {    
+      
+var data = new google.visualization.DataTable();
+data.addColumn('string','Date');
+data.addColumn('number','lv1');
+data.addColumn('number','lv2');
+data.addColumn('number','lv0');
+
+$('#ship_qty tr').not(':first, :last').each(function(i,tr) {
+   data.addRow([
+      $(tr).find('.qty').text(),
+      parseInt($(tr).find('.lv1').text()),
+      parseInt($(tr).find('.lv2').text()),
+      parseInt($(tr).find('.lv0').text())
+   ]);
+});
+      var options = {
+              width: 600,
+              height: 400,
+              legend: { position: 'top', maxLines: 3 },
+              vAxis: {minValue: 0},
+              bar: { groupWidth: '75%' },
+              isStacked: true,
+            };
+      var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+         };
+</script>
+<style>
+          table {
+    border-collapse: collapse;
+}
+      td,
+th {
+    border: 1px solid black;
+}
+
+thead {
+    text-align: center;
+}
+
+tbody {
+    text-align: right;
+}
+
+th {
+    background-color: #dddddd;
+}
+
+#ship_qty td {
+    width: 200px;
+}
+
+table td {
+    width: 100px;
+}
+      </style>
+    </head>
+    <body>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+
+<div id="columnchart_material"></div>
+
+<table id="ship_qty">
+       <tbody>
+           <tr class="titlerow">
+              <td>date</td>
+              <td>lv1</td>
+              <td>lv2</td>
+              <td>lv0</td>
+              <td>Total</td>
+          </tr>
+          <tr id="listTab">
+              <td class="qty">2019-11-12</td>
+              <td class="lv1">100</td>
+              <td class="lv2">50</td>
+              <td class="lv0">60</td>
+              <td class="total">60</td>  
+          </tr>
+          <tr id="listTab">
+              <td class="qty">2019-11-13</td>
+              <td class="lv1">20</td>
+              <td class="lv2">70</td>
+              <td class="lv0">90</td> 
+              <td class="total">60</td>   
+          </tr>
+          <tr id="listTab">
+              <td class="qty">2019-11-14</td>
+              <td class="lv1">30</td>
+              <td class="lv2">80</td>
+              <td class="lv0">90</td>
+              <td class="total">60</td>    
+          </tr>
+          
+        <tr class="totalColumn">
+            <td class="date">Total</td>
+            <td class="totalCol"></td>
+            <td class="totalCol"></td>
+            <td class="totalCol"></td>
+            <td class="totalCol"></td>
+        </tr>
+        <tbody>
+   </table>
+
+    </body>
+</html>
